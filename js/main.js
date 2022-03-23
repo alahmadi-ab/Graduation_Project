@@ -179,7 +179,7 @@ function preprocessCanvas(image) {
     //tf.mean() function is used to compute the mean of elements across the dimensions of the tensor
     //tf.toFloat() function casts the array to type float
     //The tensor.div() function is used to divide the array or tensor by the maximum RGB value(255)
-    let tensor = tf.browser.fromPixels(image).resizeNearestNeighbor([28, 28]).mean(2).expandDims(2).expandDims().toFloat().rot90(); 
+    let tensor = tf.browser.fromPixels(image).resizeNearestNeighbor([28, 28]).mean(2).expandDims(2).expandDims().toFloat(); 
     console.log(tensor.shape); 
     return tensor.div(255.0);
 }
