@@ -50,8 +50,8 @@ function draw(ctx,x,y,size,isDown)
         ctx.stroke();    
     }   
    //if not mousedown than start posi is curr position  
-  lastX = x; 
-  lastY = y; 
+  lastX = y; 
+  lastY = x; 
 }
 
 
