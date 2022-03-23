@@ -50,8 +50,8 @@ function draw(ctx,x,y,size,isDown)
         ctx.stroke();    
     }   
    //if not mousedown than start posi is curr position  
-  lastX = y; 
-  lastY = x; 
+  lastX = x; 
+  lastY = y; 
 }
 
 
@@ -129,8 +129,8 @@ function getTouchPos(e) {
         //how many fingers has touched    
       if (e.touches.length == 1) {            
         var touch = e.touches[0];            
-        touchX=touch.pageX-touch.target.offsetLeft;               
-        touchY=touch.pageY-touch.target.offsetTop;        
+        touchX=touch.pageY-touch.target.offsetLeft;               
+        touchY=touch.pageX-touch.target.offsetTop;        
       }
     }
 }
