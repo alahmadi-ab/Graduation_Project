@@ -212,6 +212,17 @@ function displayLabel(data) {
         max = data[i];        
       }
     }
-document.getElementById('result').innerHTML = maxIndex;  
-document.getElementById('confidence').innerHTML = "Confidence: "+(max*100).toFixed(2) + "%";
+
+String.prototype.toIndiaDigits= function(){
+ var id= ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+ return this.replace(/[0-9]/g, function(w){
+  return id[+w]
+ });
 }
+
+maxIndex= maxIndex.toString();	
+document.getElementById('result').innerHTML = maxIndex.toIndiaDigits();  
+document.getElementById('confidence').innerHTML = "Confidence: "+(max*100).toFixed(2) + "%";
+
+}
+
